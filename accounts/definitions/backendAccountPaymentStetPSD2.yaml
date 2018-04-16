@@ -1,0 +1,1660 @@
+paths:
+  '/Accounts/{id}/transactions/{fk}':
+    get:
+      tags:
+        - Account
+      summary: Find a related item by id for transactions.
+      operationId: Account.prototype.__findById__transactions
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for transactions
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Account id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Transaction'
+      deprecated: false
+    delete:
+      tags:
+        - Account
+      summary: Delete a related item by id for transactions.
+      operationId: Account.prototype.__destroyById__transactions
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for transactions
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Account id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - Account
+      summary: Update a related item by id for transactions.
+      operationId: Account.prototype.__updateById__transactions
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for transactions
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Transaction'
+        - name: id
+          in: path
+          description: Account id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Transaction'
+      deprecated: false
+  '/Accounts/{id}/balances/{fk}':
+    get:
+      tags:
+        - Account
+      summary: Find a related item by id for balances.
+      operationId: Account.prototype.__findById__balances
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for balances
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Account id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Balance'
+      deprecated: false
+    delete:
+      tags:
+        - Account
+      summary: Delete a related item by id for balances.
+      operationId: Account.prototype.__destroyById__balances
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for balances
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Account id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - Account
+      summary: Update a related item by id for balances.
+      operationId: Account.prototype.__updateById__balances
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for balances
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Balance'
+        - name: id
+          in: path
+          description: Account id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Balance'
+      deprecated: false
+  '/Accounts/{id}/transactions':
+    get:
+      tags:
+        - Account
+      summary: Queries transactions of Account.
+      operationId: Account.prototype.__get__transactions
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Account id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Transaction'
+      deprecated: false
+    post:
+      tags:
+        - Account
+      summary: Creates a new instance in transactions of this model.
+      operationId: Account.prototype.__create__transactions
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Transaction'
+        - name: id
+          in: path
+          description: Account id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Transaction'
+      deprecated: false
+    delete:
+      tags:
+        - Account
+      summary: Deletes all transactions of this model.
+      operationId: Account.prototype.__delete__transactions
+      parameters:
+        - name: id
+          in: path
+          description: Account id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/Accounts/{id}/transactions/count':
+    get:
+      tags:
+        - Account
+      summary: Counts transactions of Account.
+      operationId: Account.prototype.__count__transactions
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Account id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  '/Accounts/{id}/balances':
+    get:
+      tags:
+        - Account
+      summary: Queries balances of Account.
+      operationId: Account.prototype.__get__balances
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Account id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Balance'
+      deprecated: false
+    post:
+      tags:
+        - Account
+      summary: Creates a new instance in balances of this model.
+      operationId: Account.prototype.__create__balances
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/Balance'
+        - name: id
+          in: path
+          description: Account id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Balance'
+      deprecated: false
+    delete:
+      tags:
+        - Account
+      summary: Deletes all balances of this model.
+      operationId: Account.prototype.__delete__balances
+      parameters:
+        - name: id
+          in: path
+          description: Account id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/Accounts/{id}/balances/count':
+    get:
+      tags:
+        - Account
+      summary: Counts balances of Account.
+      operationId: Account.prototype.__count__balances
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: Account id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Accounts:
+    post:
+      tags:
+        - Account
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Account.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Account'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Account'
+      deprecated: false
+    patch:
+      tags:
+        - Account
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Account.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Account'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Account'
+      deprecated: false
+    put:
+      tags:
+        - Account
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Account.replaceOrCreate__put_Accounts
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Account'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Account'
+      deprecated: false
+    get:
+      tags:
+        - Account
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Account.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Account'
+      deprecated: false
+  /Accounts/replaceOrCreate:
+    post:
+      tags:
+        - Account
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Account.replaceOrCreate__post_Accounts_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Account'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Account'
+      deprecated: false
+  /Accounts/upsertWithWhere:
+    post:
+      tags:
+        - Account
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: Account.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Account'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Account'
+      deprecated: false
+  '/Accounts/{id}/exists':
+    get:
+      tags:
+        - Account
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Account.exists__get_Accounts_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Accounts/{id}':
+    head:
+      tags:
+        - Account
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Account.exists__head_Accounts_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Account
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Account.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Account'
+      deprecated: false
+    put:
+      tags:
+        - Account
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Account.replaceById__put_Accounts_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Account'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Account'
+      deprecated: false
+    delete:
+      tags:
+        - Account
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Account.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - Account
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: Account.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Account'
+        - name: id
+          in: path
+          description: Account id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Account'
+      deprecated: false
+  '/Accounts/{id}/replace':
+    post:
+      tags:
+        - Account
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Account.replaceById__post_Accounts_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Account'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Account'
+      deprecated: false
+  /Accounts/findOne:
+    get:
+      tags:
+        - Account
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Account.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Account'
+      deprecated: false
+  /Accounts/update:
+    post:
+      tags:
+        - Account
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Account.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Account'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Accounts/count:
+    get:
+      tags:
+        - Account
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Account.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Transactions:
+    post:
+      tags:
+        - Transaction
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Transaction.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Transaction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Transaction'
+      deprecated: false
+    patch:
+      tags:
+        - Transaction
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Transaction.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Transaction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Transaction'
+      deprecated: false
+    put:
+      tags:
+        - Transaction
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Transaction.replaceOrCreate__put_Transactions
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Transaction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Transaction'
+      deprecated: false
+    get:
+      tags:
+        - Transaction
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Transaction.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Transaction'
+      deprecated: false
+  /Transactions/replaceOrCreate:
+    post:
+      tags:
+        - Transaction
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Transaction.replaceOrCreate__post_Transactions_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Transaction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Transaction'
+      deprecated: false
+  /Transactions/upsertWithWhere:
+    post:
+      tags:
+        - Transaction
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: Transaction.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Transaction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Transaction'
+      deprecated: false
+  '/Transactions/{id}/exists':
+    get:
+      tags:
+        - Transaction
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Transaction.exists__get_Transactions_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Transactions/{id}':
+    head:
+      tags:
+        - Transaction
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Transaction.exists__head_Transactions_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Transaction
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Transaction.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Transaction'
+      deprecated: false
+    put:
+      tags:
+        - Transaction
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Transaction.replaceById__put_Transactions_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Transaction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Transaction'
+      deprecated: false
+    delete:
+      tags:
+        - Transaction
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Transaction.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - Transaction
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: Transaction.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Transaction'
+        - name: id
+          in: path
+          description: Transaction id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Transaction'
+      deprecated: false
+  '/Transactions/{id}/replace':
+    post:
+      tags:
+        - Transaction
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Transaction.replaceById__post_Transactions_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Transaction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Transaction'
+      deprecated: false
+  /Transactions/findOne:
+    get:
+      tags:
+        - Transaction
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Transaction.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Transaction'
+      deprecated: false
+  /Transactions/update:
+    post:
+      tags:
+        - Transaction
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Transaction.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Transaction'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Transactions/count:
+    get:
+      tags:
+        - Transaction
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Transaction.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Balances:
+    post:
+      tags:
+        - Balance
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Balance.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Balance'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Balance'
+      deprecated: false
+    patch:
+      tags:
+        - Balance
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Balance.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Balance'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Balance'
+      deprecated: false
+    put:
+      tags:
+        - Balance
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Balance.replaceOrCreate__put_Balances
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Balance'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Balance'
+      deprecated: false
+    get:
+      tags:
+        - Balance
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Balance.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Balance'
+      deprecated: false
+  /Balances/replaceOrCreate:
+    post:
+      tags:
+        - Balance
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Balance.replaceOrCreate__post_Balances_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Balance'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Balance'
+      deprecated: false
+  /Balances/upsertWithWhere:
+    post:
+      tags:
+        - Balance
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: Balance.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Balance'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Balance'
+      deprecated: false
+  '/Balances/{id}/exists':
+    get:
+      tags:
+        - Balance
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Balance.exists__get_Balances_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Balances/{id}':
+    head:
+      tags:
+        - Balance
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Balance.exists__head_Balances_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Balance
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Balance.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Balance'
+      deprecated: false
+    put:
+      tags:
+        - Balance
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Balance.replaceById__put_Balances_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Balance'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Balance'
+      deprecated: false
+    delete:
+      tags:
+        - Balance
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Balance.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - Balance
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: Balance.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Balance'
+        - name: id
+          in: path
+          description: Balance id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Balance'
+      deprecated: false
+  '/Balances/{id}/replace':
+    post:
+      tags:
+        - Balance
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Balance.replaceById__post_Balances_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Balance'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Balance'
+      deprecated: false
+  /Balances/findOne:
+    get:
+      tags:
+        - Balance
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Balance.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Balance'
+      deprecated: false
+  /Balances/update:
+    post:
+      tags:
+        - Balance
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Balance.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Balance'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Balances/count:
+    get:
+      tags:
+        - Balance
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Balance.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+definitions:
+  x-any:
+    properties: {}
+  Transaction:
+    properties:
+      Amt:
+        type: number
+        format: double
+      BookgDt:
+        type: string
+        format: date-time
+      Ccy:
+        default: EUR
+        type: string
+      CdtDbtInd:
+        type: string
+      NtryRef:
+        type: string
+      RmtInf:
+        type: object
+      Sts:
+        type: string
+      accountId:
+        type: string
+    required:
+      - Amt
+      - BookgDt
+      - Ccy
+      - CdtDbtInd
+      - NtryRef
+      - RmtInf
+      - Sts
+    additionalProperties: false
+  Balance:
+    properties:
+      balances:
+        type: array
+        items:
+          type: object
+      id:
+        type: string
+      timeStampOfValueRef:
+        type: string
+        format: date-time
+      accountId:
+        type: string
+    required:
+      - balances
+      - id
+      - timeStampOfValueRef
+    additionalProperties: false
+  Account:
+    properties:
+      Ccy:
+        maxLength: 3
+        description: Currency used for the account
+        type: string
+      balances:
+        minItems: 1
+        description: list of balances provided by the ASPSP
+        type: array
+        items:
+          type: string
+      details:
+        maxLength: 140
+        description: |
+          Specifications that might be provided by the ASPSP
+          - characteristics of the account
+          - characteristics of the relevant card
+        type: string
+      iban:
+        pattern: '^[A-Z]{2,2}[0-9]{2,2}[a-zA-Z0-9]{1,30}$'
+        description: IBAN of the account that may be provided by the ASPSP
+        type: string
+      id:
+        maxLength: 70
+        description: Id of the account as defined by the PSU and the relevant ASPSP
+        type: string
+      linkedAccount:
+        maxLength: 70
+        description: >-
+          Case of a set of pending card transactions, the APSP will provide the
+          relevant cash account the card is set up on.
+        type: string
+      name:
+        maxLength: 70
+        description: >
+          Label of the PSU account
+
+          In case of a delayed debit card transaction set, the name shall
+          specify the holder name and the imputation date
+        type: string
+      psu:
+        type: string
+      psuStatus:
+        maxLength: 35
+        description: >-
+          Relationship between the PSU and the account - Account Holder -
+          Co-account Holder - Attorney
+        type: string
+      type:
+        enum:
+          - CACC
+        description: |
+          Specifies the type of the account
+          - CACC: Cash account
+        type: string
+      usage:
+        enum:
+          - PRIV
+          - ORGA
+        description: |
+          Specifies the usage of the account
+          - PRIV: private personal account
+          - ORGA: professional account
+        type: string
+    required:
+      - Ccy
+      - id
+      - name
+      - psu
+      - type
+    additionalProperties: false
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: backendaccountpaymentstetpsd2
+  version: 1.0.0
+  title: backendAccountPaymentStetPSD2
+schemes:
+  - https
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'http://localhost:4001'
+    dev:
+      properties:
+        runtime-url: >-
+          https://apiconnect-358eba61-fe8d-4662-8076-ecd7553b7fa3.jog-ob-stet.apic.eu-gb.mybluemix.net
+        invoke-tls-profile: 'client:Loopback-client'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: $(invoke-tls-profile)
+  properties:
+    runtime-url:
+      value: ''
+      description: ''
+      encoded: false
+    invoke-tls-profile:
+      value: ''
+      description: ''
+      encoded: false

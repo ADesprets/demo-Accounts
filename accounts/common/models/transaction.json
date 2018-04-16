@@ -1,0 +1,45 @@
+{
+  "name": "Transaction",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Amt": {
+      "type": "number",
+      "required": true
+    },
+    "BookgDt": {
+      "type": "date",
+      "required": true
+    },
+    "Ccy": {
+      "type": "string",
+      "required": true,
+      "default": "EUR"
+    },
+    "CdtDbtInd": {
+      "type": "string",
+      "required": true
+    },
+    "NtryRef": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
+    },
+    "RmtInf": {
+      "type": "object",
+      "required": true
+    },
+    "Sts": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

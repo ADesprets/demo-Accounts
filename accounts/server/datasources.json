@@ -1,0 +1,8 @@
+{
+  "inmemory": {
+    "name": "inmemory",
+    "localStorage": "",
+    "file": "./server/data.json",
+    "connector": "memory"
+  }
+}

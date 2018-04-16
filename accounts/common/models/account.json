@@ -1,0 +1,95 @@
+{
+  "name": "Account",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Ccy": {
+      "type": "string",
+      "required": true,
+      "description": "Currency used for the account",
+      "maxLength": 3
+    },
+    "balances": {
+      "type": [
+        "string"
+      ],
+      "description": "list of balances provided by the ASPSP",
+      "minItems": 1,
+      "isArray": true
+    },
+    "details": {
+      "type": "string",
+      "description": "Specifications that might be provided by the ASPSP\n- characteristics of the account\n- characteristics of the relevant card\n",
+      "maxLength": 140
+    },
+    "iban": {
+      "type": "string",
+      "description": "IBAN of the account that may be provided by the ASPSP",
+      "pattern": "^[A-Z]{2,2}[0-9]{2,2}[a-zA-Z0-9]{1,30}$"
+    },
+    "id": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "description": "Id of the account as defined by the PSU and the relevant ASPSP",
+      "maxLength": 70,
+      "isArray": false
+    },
+    "linkedAccount": {
+      "type": "string",
+      "description": "Case of a set of pending card transactions, the APSP will provide the relevant cash account the card is set up on.",
+      "maxLength": 70
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "description": "Label of the PSU account\nIn case of a delayed debit card transaction set, the name shall specify the holder name and the imputation date\n",
+      "maxLength": 70
+    },
+    "psu": {
+      "type": "string",
+      "id": false,
+      "required": true,
+      "isArray": false
+    },
+    "psuStatus": {
+      "type": "string",
+      "description": "Relationship between the PSU and the account - Account Holder - Co-account Holder - Attorney",
+      "maxLength": 35
+    },
+    "type": {
+      "type": "string",
+      "required": true,
+      "description": "Specifies the type of the account\n- CACC: Cash account\n",
+      "enum": [
+        "CACC"
+      ]
+    },
+    "usage": {
+      "type": "string",
+      "description": "Specifies the usage of the account\n- PRIV: private personal account\n- ORGA: professional account\n",
+      "enum": [
+        "PRIV",
+        "ORGA"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "transactions": {
+      "type": "hasMany",
+      "model": "Transaction",
+      "foreignKey": ""
+    },
+    "balances": {
+      "type": "hasMany",
+      "model": "Balance",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

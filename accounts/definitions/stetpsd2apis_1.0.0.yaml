@@ -1,0 +1,23 @@
+product: 1.0.0
+info:
+  name: stetpsd2apis
+  title: StetPsd2APIs
+  version: 1.0.0
+visibility:
+  view:
+    type: public
+  subscribe:
+    type: authenticated
+plans:
+  default:
+    title: Default Plan
+    description: Default Plan
+    approval: false
+    rate-limit:
+      value: 100/hour
+      hard-limit: false
+apis:
+  psd2-aspsp-services-for-aisp-pisp-and-piisp:
+    $ref: ../psd2-aspsp-services-for-aisp-pisp-and-piisp_1.0.0(1).yaml
+  stetaccountspsuoauth2security:
+    $ref: ../stetaccountspsuoauth2security_1.0.0(1).yaml

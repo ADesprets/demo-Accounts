@@ -1,0 +1,31 @@
+{
+  "ids": {
+    "Account": 202,
+    "Transaction": 9,
+    "Balance": 504
+  },
+  "models": {
+    "Account": {
+      "100": "{\"Ccy\":\"EUR\",\"iban\":\"FR1420041010050500013M02606\",\"id\":\"100\",\"name\":\"Compte de Madame Anne Dubois\",\"psu\":\"anne-dubois\",\"psuStatus\":\"Account Holder\",\"type\":\"CACC\",\"usage\":\"PRIV\"}",
+      "101": "{\"Ccy\":\"EUR\",\"iban\":\"FR1540076510079800014C01808\",\"id\":\"101\",\"name\":\"Compte de Monsieur et Madame Dubois\",\"psu\":\"anne-dubois\",\"psuStatus\":\"Co-Account Holder\",\"type\":\"CACC\",\"usage\":\"PRIV\"}",
+      "200": "{\"Ccy\":\"EUR\",\"iban\":\"FR1430181010050500021J037909\",\"id\":\"200\",\"name\":\"Compte de Monsieur Jean Martin\",\"psu\":\"jean-martin\",\"psuStatus\":\"Account Holder\",\"type\":\"CACC\",\"usage\":\"PRIV\"}",
+      "201": "{\"Ccy\":\"EUR\",\"iban\":\"FR2420056020050500068M02123\",\"id\":\"201\",\"name\":\"Compte de Monsieur et Madame Martin\",\"psu\":\"jean-martin\",\"psuStatus\":\"Co-Account Holder\",\"type\":\"CACC\",\"usage\":\"PRIV\"}"
+    },
+    "Transaction": {
+      "TR700": "{\"Amt\":66.22,\"BookgDt\":\"2017-05-25T00:54:18.729Z\",\"Ccy\":\"EUR\",\"CdtDbtInd\":\"DBIT\",\"NtryRef\":\"TR700\",\"RmtInf\":{\"Ustrd\":[\"Prelevement ICS 1234567ABCD\"]},\"Sts\":\"BOOK\",\"accountId\":\"100\"}",
+      "TR701": "{\"Amt\":214.7,\"BookgDt\":\"2017-08-21T02:54:18.729Z\",\"Ccy\":\"EUR\",\"CdtDbtInd\":\"DBIT\",\"NtryRef\":\"TR701\",\"RmtInf\":{\"Ustrd\":[\"Cheque 1000AAA567\"]},\"Sts\":\"BOOK\",\"accountId\":\"100\"}",
+      "TR702": "{\"Amt\":814.7,\"BookgDt\":\"2017-09-03T02:54:18.729Z\",\"Ccy\":\"EUR\",\"CdtDbtInd\":\"DBIT\",\"NtryRef\":\"TR702\",\"RmtInf\":{\"Ustrd\":[\"Cheque 1000AYU567\"]},\"Sts\":\"BOOK\",\"accountId\":\"101\"}",
+      "TR703": "{\"Amt\":1829.5,\"BookgDt\":\"2017-11-03T02:54:18.729Z\",\"Ccy\":\"EUR\",\"CdtDbtInd\":\"DBIT\",\"NtryRef\":\"TR703\",\"RmtInf\":{\"Ustrd\":[\"Prelevement Immobilier ABCD1234567\"]},\"Sts\":\"BOOK\",\"accountId\":\"200\"}",
+      "TR704": "{\"Amt\":29.5,\"BookgDt\":\"2017-11-07T02:54:18.729Z\",\"Ccy\":\"EUR\",\"CdtDbtInd\":\"DBIT\",\"NtryRef\":\"TR704\",\"RmtInf\":{\"Ustrd\":[\"Prelevement KKL1234567\"]},\"Sts\":\"BOOK\",\"accountId\":\"200\"}",
+      "TR705": "{\"Amt\":987.24,\"BookgDt\":\"2017-12-14T02:54:18.729Z\",\"Ccy\":\"EUR\",\"CdtDbtInd\":\"DBIT\",\"NtryRef\":\"TR705\",\"RmtInf\":{\"Ustrd\":[\"Prelevement POL217004\"]},\"Sts\":\"BOOK\",\"accountId\":\"201\"}",
+      "TR706": "{\"Amt\":12.78,\"BookgDt\":\"2017-12-16T02:54:18.729Z\",\"Ccy\":\"EUR\",\"CdtDbtInd\":\"DBIT\",\"NtryRef\":\"TR706\",\"RmtInf\":{\"Ustrd\":[\"Cheque 1002345\"]},\"Sts\":\"BOOK\",\"accountId\":\"200\"}",
+      "TR707": "{\"Amt\":29.99,\"BookgDt\":\"2017-12-01T02:54:18.729Z\",\"Ccy\":\"EUR\",\"CdtDbtInd\":\"DBIT\",\"NtryRef\":\"TR707\",\"RmtInf\":{\"Ustrd\":[\"Virement TelCo\"]},\"Sts\":\"BOOK\",\"accountId\":\"201\"}"
+    },
+    "Balance": {
+      "500": "{\"balances\":[{\"name\":\"Solde comptable au 12/12/2017\",\"Amt\":\"1239.45\",\"Ccy\":\"EUR\",\"Sts\":\"CLBD\",\"lastCommitedTransaction\":\"TR700\"},{\"name\":\"Solde instantane au 12/01/2017 20:13\",\"Amt\":\"1059.65\",\"Ccy\":\"EUR\",\"Sts\":\"XPCD\",\"lastCommitedTransaction\":\"TR701\"}],\"id\":\"500\",\"timeStampOfValueRef\":\"2017-12-12T04:34:00.529Z\",\"accountId\":\"100\"}",
+      "501": "{\"balances\":[{\"name\":\"Solde comptable au 16/12/2017\",\"Amt\":\"267.13\",\"Ccy\":\"EUR\",\"Sts\":\"CLBD\",\"lastCommitedTransaction\":\"TR702\"},{\"name\":\"Solde instantane au 16/01/2017 20:14\",\"Amt\":\"87.61\",\"Ccy\":\"EUR\",\"Sts\":\"XPCD\",\"lastCommitedTransaction\":\"TR703\"}],\"id\":\"501\",\"timeStampOfValueRef\":\"2017-12-16T17:52:00.534Z\",\"accountId\":\"101\"}",
+      "502": "{\"balances\":[{\"name\":\"Solde comptable au 14/12/2017\",\"Amt\":\"6726.13\",\"Ccy\":\"EUR\",\"Sts\":\"CLBD\",\"lastCommitedTransaction\":\"TR704\"},{\"name\":\"Solde instantane au 14/01/2017 20:14\",\"Amt\":\"4287.61\",\"Ccy\":\"EUR\",\"Sts\":\"XPCD\",\"lastCommitedTransaction\":\"TR705\"}],\"id\":\"502\",\"timeStampOfValueRef\":\"2017-12-14T17:52:00.534Z\",\"accountId\":\"200\"}",
+      "503": "{\"balances\":[{\"name\":\"Solde comptable au 25/12/2017\",\"Amt\":\"6726.13\",\"Ccy\":\"EUR\",\"Sts\":\"CLBD\",\"lastCommitedTransaction\":\"TR706\"},{\"name\":\"Solde instantane au 01/01/2018 20:14\",\"Amt\":\"4287.61\",\"Ccy\":\"EUR\",\"Sts\":\"XPCD\",\"lastCommitedTransaction\":\"TR707\"}],\"id\":\"503\",\"timeStampOfValueRef\":\"2017-12-25T17:52:00.534Z\",\"accountId\":\"201\"}"
+    }
+  }
+}
